@@ -7,6 +7,7 @@ import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.ColorFilter;
 import android.graphics.Paint;
+import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -98,6 +99,7 @@ public class PasswordEditText extends AppCompatEditText {
             setCompoundDrawables(null, null, mHideDrawable, null);
         }
         setInputType(InputType.TYPE_CLASS_TEXT |InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+        setTypeface(Typeface.DEFAULT);
         setSelection(getText().length());
         mPasswordVisible = true;
     }
@@ -109,6 +111,7 @@ public class PasswordEditText extends AppCompatEditText {
             setCompoundDrawables(null, null, mShowDrawable, null);
         }
         setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+        setTypeface(Typeface.DEFAULT);
         setSelection(getText().length());
         mPasswordVisible = false;
     }
